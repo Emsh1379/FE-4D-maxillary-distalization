@@ -52,13 +52,24 @@ out/          result summaries used in the paper
 
 ## Model settings
 
-All settings are in `ofj4d/spec.py`, `ofj4d/solve4d.py` and `ofj4d/arch4d.py` and can be changed with the
-environment variables named there. The paper used the code defaults, including:
+All parameters are in `ofj4d/spec.py`, `ofj4d/solve4d.py` and `ofj4d/arch4d.py` and can be changed with the
+environment variables named there. **The runs in the paper used the following production environment, which
+differs from some code defaults:**
+
+```bash
+export OFJ_GEOM=build4d/geom_fe.pkl        # repaired PDL / tooth mesh
+export OFJ_ALIGNER=build4d/aligner_fe.pkl  # repaired aligner mesh
+export OFJ_K_N=1000                        # aligner-crown penalty contact, N/mm (code default 2000)
+export OFJ_PRESCRIBE=tip                   # socket kinematics: tipping about the apical third (code default: translate)
+export OFJ_TIP_BLEND=0.40                  # blend between translation (0) and full tipping (1), calibrated on the source control group
+export OFJ_BONE=rigid
+```
+
+Other settings (code defaults, unchanged):
 
 * PDL: 0.30-mm three-layer shell, bilinear (0.05 / 0.22 MPa, knee at 7.5 % strain), Poisson's ratio 0.45
-* Aligner: 0.70-mm shell, E = 1500 MPa, ν = 0.30; aligner–crown penalty contact 2000 N/mm, friction 0.20
+* Aligner: 0.70-mm shell, E = 1500 MPa, ν = 0.30; aligner–crown friction 0.20
 * Attachments: 3 × 2 × 1 mm horizontal on 17/16, 2 × 3 × 1 mm vertical on 15–13, E = 20 000 MPa
-* Socket kinematics: bodily translation of each aligner socket to the planned crown position (`OFJ_PRESCRIBE=translate`)
 * Tooth-to-tooth contact: 500 N/mm per contact point; wire–slot penalty 10 000 N/mm, friction 0.15
 * Elastic and headgear force: 200 gf; IZC miniscrew head 4 mm apical to the buccal crest and 2 mm proud of bone
 
@@ -72,7 +83,7 @@ Open-Full-Jaw data (`ofj/build_model.py`, see `data/README.txt`); the patient me
 not redistributed here because they are derived from the Open-Full-Jaw dataset, which should be obtained
 from its own repository.
 
-Run from the repository root (paths such as `build4d/` are relative to it):
+Run from the repository root (paths such as `build4d/` are relative to it), with the production environment above set:
 
 ```bash
 python ofj4d/run4d.py --group ca_precision_cut      # one aligner group, 70 steps (resumes from its checkpoint)
