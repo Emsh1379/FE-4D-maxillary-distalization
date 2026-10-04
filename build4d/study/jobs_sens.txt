@@ -1,0 +1,29 @@
+hg            hg
+ca_precision_cut ca_precision_cut
+ca_aligner_hook ca_aligner_hook
+ca_metal_hook ca_metal_hook
+ca_control    ca_control
+hg_150        hg OFJ_STUDY_GF=150
+hg_250        hg OFJ_STUDY_GF=250
+pc_150        ca_precision_cut OFJ_STUDY_GF=150
+pc_250        ca_precision_cut OFJ_STUDY_GF=250
+cah_150       ca_aligner_hook OFJ_STUDY_GF=150
+cah_250       ca_aligner_hook OFJ_STUDY_GF=250
+cmh_150       ca_metal_hook OFJ_STUDY_GF=150
+cmh_250       ca_metal_hook OFJ_STUDY_GF=250
+hg_pdl068     hg OFJ_PDL_LINEAR_E=0.68
+pc_pdl068     ca_precision_cut OFJ_PDL_LINEAR_E=0.68
+cah_pdl068    ca_aligner_hook OFJ_PDL_LINEAR_E=0.68
+cmh_pdl068    ca_metal_hook OFJ_PDL_LINEAR_E=0.68
+pc_izc6       ca_precision_cut OFJ_IZC_APICAL=6 OFJ_IZC_FILE=build4d/izc_a6.pkl
+cah_izc6      ca_aligner_hook OFJ_IZC_APICAL=6 OFJ_IZC_FILE=build4d/izc_a6.pkl
+cmh_izc6      ca_metal_hook OFJ_IZC_APICAL=6 OFJ_IZC_FILE=build4d/izc_a6.pkl
+cmh_arm6      ca_metal_hook OFJ_MH_ARM=6
+cah_arm6      ca_aligner_hook OFJ_MH_ARM=6
+cah_w15       ca_aligner_hook OFJ_AH_WIDTH=1.5
+cah_w30       ca_aligner_hook OFJ_AH_WIDTH=3.0
+hg_ang0       hg OFJ_HG_ANGLE=0
+hg_ang30      hg OFJ_HG_ANGLE=30
+hg_bonded     hg OFJ_WIRE_COUPLING=bonded
+hg_mu0        hg OFJ_WIRE_MU=0
+hg_mu030      hg OFJ_WIRE_MU=0.30

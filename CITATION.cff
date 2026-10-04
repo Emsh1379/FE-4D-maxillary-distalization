@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article below."
+title: "Headgear vs clear-aligner elastics for full-arch distalization: 4D finite element code"
+authors:
+  - family-names: Savabieh
+    given-names: Shekoofeh
+    orcid: "https://orcid.org/0009-0000-4973-1793"
+  - family-names: Sharifi
+    given-names: Mohammad Emad
+    orcid: "https://orcid.org/0000-0003-2846-6964"
+license: MIT
+repository-code: "https://github.com/Emsh1379/FE-4D-maxillary-distalization"
+preferred-citation:
+  type: article
+  title: "Comparison of headgear-assisted fixed appliances and clear aligners with precision-cut, aligner-hook or metal-hook elastics for full-arch distalization: a multi-patient 4D finite element study"
+  authors:
+    - family-names: Savabieh
+      given-names: Shekoofeh
+    - family-names: Sharifi
+      given-names: Mohammad Emad
+  journal: "BMC Oral Health"
+  status: submitted
+  year: 2026

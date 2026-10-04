@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pkl
+*.npz
+build/
+build4d/*.pkl
+patients/

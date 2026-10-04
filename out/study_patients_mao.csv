@@ -1,0 +1,251 @@
+patient,group,path,landmark,comp,value
+8,hg,C (16 MB),Cusp tip,AP,3.301866088427756
+8,ca_precision_cut,C (16 MB),Cusp tip,AP,1.5497278702253117
+8,ca_aligner_hook,C (16 MB),Cusp tip,AP,1.4077299946124284
+8,ca_metal_hook,C (16 MB),Cusp tip,AP,1.4199954127192205
+8,ca_control,C (16 MB),Cusp tip,AP,0.6122391426273118
+3,hg,C (16 MB),Cusp tip,AP,2.492234311538366
+3,ca_precision_cut,C (16 MB),Cusp tip,AP,1.5577001189015767
+3,ca_aligner_hook,C (16 MB),Cusp tip,AP,1.4655262723737377
+3,ca_metal_hook,C (16 MB),Cusp tip,AP,1.4647193401436185
+3,ca_control,C (16 MB),Cusp tip,AP,0.7671531414160966
+4,hg,C (16 MB),Cusp tip,AP,4.149788698197872
+4,ca_precision_cut,C (16 MB),Cusp tip,AP,1.3833198808678875
+4,ca_aligner_hook,C (16 MB),Cusp tip,AP,1.3338606924527194
+4,ca_metal_hook,C (16 MB),Cusp tip,AP,1.33704206675351
+4,ca_control,C (16 MB),Cusp tip,AP,0.2947566567768702
+5,hg,C (16 MB),Cusp tip,AP,1.6451438292717433
+5,ca_precision_cut,C (16 MB),Cusp tip,AP,1.2206903738751158
+5,ca_aligner_hook,C (16 MB),Cusp tip,AP,1.0324245855947831
+5,ca_metal_hook,C (16 MB),Cusp tip,AP,1.0132951009264735
+5,ca_control,C (16 MB),Cusp tip,AP,0.839779019879364
+6,hg,C (16 MB),Cusp tip,AP,3.8542517818910507
+6,ca_precision_cut,C (16 MB),Cusp tip,AP,0.9955611171933415
+6,ca_aligner_hook,C (16 MB),Cusp tip,AP,1.044450388270848
+6,ca_metal_hook,C (16 MB),Cusp tip,AP,1.0258259170959443
+6,ca_control,C (16 MB),Cusp tip,AP,0.04940122000529834
+8,hg,C (16 MB),Apex,AP,0.8728040793393376
+8,ca_precision_cut,C (16 MB),Apex,AP,0.1987264685226189
+8,ca_aligner_hook,C (16 MB),Apex,AP,0.3029803245933784
+8,ca_metal_hook,C (16 MB),Apex,AP,0.31367434674093997
+8,ca_control,C (16 MB),Apex,AP,-0.23596573419722763
+3,hg,C (16 MB),Apex,AP,1.0728199536030116
+3,ca_precision_cut,C (16 MB),Apex,AP,0.24377703748201113
+3,ca_aligner_hook,C (16 MB),Apex,AP,0.3844573344807614
+3,ca_metal_hook,C (16 MB),Apex,AP,0.3844996634184517
+3,ca_control,C (16 MB),Apex,AP,-0.0621518844664184
+4,hg,C (16 MB),Apex,AP,0.6056330894714564
+4,ca_precision_cut,C (16 MB),Apex,AP,0.2267208587499749
+4,ca_aligner_hook,C (16 MB),Apex,AP,0.42566829935556316
+4,ca_metal_hook,C (16 MB),Apex,AP,0.4315440834835022
+4,ca_control,C (16 MB),Apex,AP,-0.04591861820982022
+5,hg,C (16 MB),Apex,AP,0.7213608048218036
+5,ca_precision_cut,C (16 MB),Apex,AP,0.0946796782840623
+5,ca_aligner_hook,C (16 MB),Apex,AP,0.21493999473629738
+5,ca_metal_hook,C (16 MB),Apex,AP,0.23220293948125012
+5,ca_control,C (16 MB),Apex,AP,-0.22257359600901006
+6,hg,C (16 MB),Apex,AP,0.758001845962215
+6,ca_precision_cut,C (16 MB),Apex,AP,0.22829725358098568
+6,ca_aligner_hook,C (16 MB),Apex,AP,0.3351234253064626
+6,ca_metal_hook,C (16 MB),Apex,AP,0.3374154629173313
+6,ca_control,C (16 MB),Apex,AP,-0.06806764586396859
+8,hg,E (16 DB),Cusp tip,BP,-4.936624516469765
+8,ca_precision_cut,E (16 DB),Cusp tip,BP,0.12753155045211545
+8,ca_aligner_hook,E (16 DB),Cusp tip,BP,-0.24945815916767022
+8,ca_metal_hook,E (16 DB),Cusp tip,BP,-0.3081446026899473
+8,ca_control,E (16 DB),Cusp tip,BP,1.1892553405595014
+3,hg,E (16 DB),Cusp tip,BP,-5.6428643360567206
+3,ca_precision_cut,E (16 DB),Cusp tip,BP,0.34192002099361346
+3,ca_aligner_hook,E (16 DB),Cusp tip,BP,-0.3893860969248459
+3,ca_metal_hook,E (16 DB),Cusp tip,BP,-0.39278916078120535
+3,ca_control,E (16 DB),Cusp tip,BP,1.1872724474502863
+4,hg,E (16 DB),Cusp tip,BP,-4.1729210266069785
+4,ca_precision_cut,E (16 DB),Cusp tip,BP,0.4607712615619488
+4,ca_aligner_hook,E (16 DB),Cusp tip,BP,-0.02063517003478514
+4,ca_metal_hook,E (16 DB),Cusp tip,BP,-0.057018537625850324
+4,ca_control,E (16 DB),Cusp tip,BP,1.4775861821844642
+5,hg,E (16 DB),Cusp tip,BP,-5.277745070741539
+5,ca_precision_cut,E (16 DB),Cusp tip,BP,0.036155773459230586
+5,ca_aligner_hook,E (16 DB),Cusp tip,BP,-0.4780294797028345
+5,ca_metal_hook,E (16 DB),Cusp tip,BP,-0.5617131057429859
+5,ca_control,E (16 DB),Cusp tip,BP,1.1414161340386326
+6,hg,E (16 DB),Cusp tip,BP,-3.4985902080853872
+6,ca_precision_cut,E (16 DB),Cusp tip,BP,1.3284349951941532
+6,ca_aligner_hook,E (16 DB),Cusp tip,BP,0.7282820500375954
+6,ca_metal_hook,E (16 DB),Cusp tip,BP,0.7508093541876824
+6,ca_control,E (16 DB),Cusp tip,BP,1.8036168838099493
+8,hg,D (16 occlusal),Mesial pit,V,0.08370633767809091
+8,ca_precision_cut,D (16 occlusal),Mesial pit,V,0.44707173415695656
+8,ca_aligner_hook,D (16 occlusal),Mesial pit,V,-0.057950383736052186
+8,ca_metal_hook,D (16 occlusal),Mesial pit,V,-0.0674038019562565
+8,ca_control,D (16 occlusal),Mesial pit,V,-0.3002697839203462
+3,hg,D (16 occlusal),Mesial pit,V,0.018814194061405026
+3,ca_precision_cut,D (16 occlusal),Mesial pit,V,0.6208903938255547
+3,ca_aligner_hook,D (16 occlusal),Mesial pit,V,0.14636956166460718
+3,ca_metal_hook,D (16 occlusal),Mesial pit,V,0.14768412906620684
+3,ca_control,D (16 occlusal),Mesial pit,V,-0.13421000278043016
+4,hg,D (16 occlusal),Mesial pit,V,-0.4015796844364645
+4,ca_precision_cut,D (16 occlusal),Mesial pit,V,0.5913230589760453
+4,ca_aligner_hook,D (16 occlusal),Mesial pit,V,0.008447545893828998
+4,ca_metal_hook,D (16 occlusal),Mesial pit,V,0.003187620058020549
+4,ca_control,D (16 occlusal),Mesial pit,V,-0.07248431646172629
+5,hg,D (16 occlusal),Mesial pit,V,0.009570735782422068
+5,ca_precision_cut,D (16 occlusal),Mesial pit,V,0.12827276539556945
+5,ca_aligner_hook,D (16 occlusal),Mesial pit,V,-0.29184141613298764
+5,ca_metal_hook,D (16 occlusal),Mesial pit,V,-0.3009671748286802
+5,ca_control,D (16 occlusal),Mesial pit,V,-0.2655019989605125
+6,hg,D (16 occlusal),Mesial pit,V,-0.6894411208924387
+6,ca_precision_cut,D (16 occlusal),Mesial pit,V,0.5750047175743884
+6,ca_aligner_hook,D (16 occlusal),Mesial pit,V,0.05910483394784552
+6,ca_metal_hook,D (16 occlusal),Mesial pit,V,0.06428404799778138
+6,ca_control,D (16 occlusal),Mesial pit,V,-0.08655380216645638
+8,hg,A (13),Cusp tip,V,-2.368034889819545
+8,ca_precision_cut,A (13),Cusp tip,V,0.5670303693860905
+8,ca_aligner_hook,A (13),Cusp tip,V,0.2357014536432106
+8,ca_metal_hook,A (13),Cusp tip,V,0.2166956501293823
+8,ca_control,A (13),Cusp tip,V,0.18878278826540326
+3,hg,A (13),Cusp tip,V,-2.110303302160502
+3,ca_precision_cut,A (13),Cusp tip,V,0.8166320245547322
+3,ca_aligner_hook,A (13),Cusp tip,V,0.3848300330299115
+3,ca_metal_hook,A (13),Cusp tip,V,0.39125689510482586
+3,ca_control,A (13),Cusp tip,V,0.8089967094642961
+4,hg,A (13),Cusp tip,V,-2.1558926507533274
+4,ca_precision_cut,A (13),Cusp tip,V,0.4804032565866798
+4,ca_aligner_hook,A (13),Cusp tip,V,0.16314517340744553
+4,ca_metal_hook,A (13),Cusp tip,V,0.15863441274643197
+4,ca_control,A (13),Cusp tip,V,0.5507760157794865
+5,hg,A (13),Cusp tip,V,-2.1421150940453604
+5,ca_precision_cut,A (13),Cusp tip,V,0.3322082591566481
+5,ca_aligner_hook,A (13),Cusp tip,V,-0.04211464798457922
+5,ca_metal_hook,A (13),Cusp tip,V,-0.05404402469414364
+5,ca_control,A (13),Cusp tip,V,0.24929740472277528
+6,hg,A (13),Cusp tip,V,-1.6671362908697296
+6,ca_precision_cut,A (13),Cusp tip,V,0.9036747889998691
+6,ca_aligner_hook,A (13),Cusp tip,V,0.5510628163474108
+6,ca_metal_hook,A (13),Cusp tip,V,0.5751332285652897
+6,ca_control,A (13),Cusp tip,V,0.7936935631695438
+8,hg,A (13),Cusp tip,AP,3.5944275854030336
+8,ca_precision_cut,A (13),Cusp tip,AP,1.1471692008489158
+8,ca_aligner_hook,A (13),Cusp tip,AP,1.0997618087512906
+8,ca_metal_hook,A (13),Cusp tip,AP,1.1172772758557876
+8,ca_control,A (13),Cusp tip,AP,0.15544393348313496
+3,hg,A (13),Cusp tip,AP,1.320990586619153
+3,ca_precision_cut,A (13),Cusp tip,AP,1.6469376376009601
+3,ca_aligner_hook,A (13),Cusp tip,AP,1.4576872496867523
+3,ca_metal_hook,A (13),Cusp tip,AP,1.453388616578588
+3,ca_control,A (13),Cusp tip,AP,0.8480684462866294
+4,hg,A (13),Cusp tip,AP,2.260610335276658
+4,ca_precision_cut,A (13),Cusp tip,AP,1.4752447609216706
+4,ca_aligner_hook,A (13),Cusp tip,AP,1.2534702989073776
+4,ca_metal_hook,A (13),Cusp tip,AP,1.2448785882133522
+4,ca_control,A (13),Cusp tip,AP,0.4583194121457204
+5,hg,A (13),Cusp tip,AP,1.5652270852312002
+5,ca_precision_cut,A (13),Cusp tip,AP,1.3781220803743413
+5,ca_aligner_hook,A (13),Cusp tip,AP,1.2414747193156919
+5,ca_metal_hook,A (13),Cusp tip,AP,1.2247874191822004
+5,ca_control,A (13),Cusp tip,AP,0.9995880460190895
+6,hg,A (13),Cusp tip,AP,1.6949262033244898
+6,ca_precision_cut,A (13),Cusp tip,AP,1.4184550049834206
+6,ca_aligner_hook,A (13),Cusp tip,AP,1.2416297441219974
+6,ca_metal_hook,A (13),Cusp tip,AP,1.223546046458478
+6,ca_control,A (13),Cusp tip,AP,0.6586780049875107
+8,hg,B (11),Incisal edge,BP,5.091619125881206
+8,ca_precision_cut,B (11),Incisal edge,BP,1.9433802783943672
+8,ca_aligner_hook,B (11),Incisal edge,BP,1.728509654286341
+8,ca_metal_hook,B (11),Incisal edge,BP,1.7212366136323107
+8,ca_control,B (11),Incisal edge,BP,1.1828644666101389
+3,hg,B (11),Incisal edge,BP,2.619252617722166
+3,ca_precision_cut,B (11),Incisal edge,BP,1.9612236706072517
+3,ca_aligner_hook,B (11),Incisal edge,BP,2.0593054915045426
+3,ca_metal_hook,B (11),Incisal edge,BP,2.043008306260472
+3,ca_control,B (11),Incisal edge,BP,0.8802952547895082
+4,hg,B (11),Incisal edge,BP,3.7698775891479968
+4,ca_precision_cut,B (11),Incisal edge,BP,2.4159437882387493
+4,ca_aligner_hook,B (11),Incisal edge,BP,2.1907419586022985
+4,ca_metal_hook,B (11),Incisal edge,BP,2.1895315474992505
+4,ca_control,B (11),Incisal edge,BP,1.2010924618768577
+5,hg,B (11),Incisal edge,BP,4.208511077462215
+5,ca_precision_cut,B (11),Incisal edge,BP,1.7127059447276096
+5,ca_aligner_hook,B (11),Incisal edge,BP,1.6818238159581098
+5,ca_metal_hook,B (11),Incisal edge,BP,1.670541457414809
+5,ca_control,B (11),Incisal edge,BP,1.0726217403666984
+6,hg,B (11),Incisal edge,BP,3.4749239049944745
+6,ca_precision_cut,B (11),Incisal edge,BP,2.2644375843679847
+6,ca_aligner_hook,B (11),Incisal edge,BP,2.0781499020303182
+6,ca_metal_hook,B (11),Incisal edge,BP,2.062254062713934
+6,ca_control,B (11),Incisal edge,BP,1.3291221474263417
+8,hg,B (11),Apex,BP,-0.8262644190430538
+8,ca_precision_cut,B (11),Apex,BP,-0.25860030714496746
+8,ca_aligner_hook,B (11),Apex,BP,-0.42965602171921574
+8,ca_metal_hook,B (11),Apex,BP,-0.47116752946333107
+8,ca_control,B (11),Apex,BP,-0.07260328096888684
+3,hg,B (11),Apex,BP,-1.0172792659647367
+3,ca_precision_cut,B (11),Apex,BP,0.030905698855537587
+3,ca_aligner_hook,B (11),Apex,BP,-0.34056554080338586
+3,ca_metal_hook,B (11),Apex,BP,-0.3448305483149869
+3,ca_control,B (11),Apex,BP,0.007472803770725071
+4,hg,B (11),Apex,BP,-1.535659905012091
+4,ca_precision_cut,B (11),Apex,BP,-0.32574922483078284
+4,ca_aligner_hook,B (11),Apex,BP,-0.3880984160547707
+4,ca_metal_hook,B (11),Apex,BP,-0.40294702433123897
+4,ca_control,B (11),Apex,BP,-0.24437352785415162
+5,hg,B (11),Apex,BP,-1.5864458690594085
+5,ca_precision_cut,B (11),Apex,BP,-0.28207716096370367
+5,ca_aligner_hook,B (11),Apex,BP,-0.5116966187782684
+5,ca_metal_hook,B (11),Apex,BP,-0.5599492458927465
+5,ca_control,B (11),Apex,BP,-0.11270483225113896
+6,hg,B (11),Apex,BP,-1.2358773126384515
+6,ca_precision_cut,B (11),Apex,BP,0.15492156036197854
+6,ca_aligner_hook,B (11),Apex,BP,-0.08468186490754816
+6,ca_metal_hook,B (11),Apex,BP,-0.06391721496455363
+6,ca_control,B (11),Apex,BP,0.15574442522141055
+8,hg,B (11),Incisal edge,V,-1.7790209043254477
+8,ca_precision_cut,B (11),Incisal edge,V,1.0425879415405073
+8,ca_aligner_hook,B (11),Incisal edge,V,1.11197134687785
+8,ca_metal_hook,B (11),Incisal edge,V,1.1159907062817362
+8,ca_control,B (11),Incisal edge,V,0.18926249882169988
+3,hg,B (11),Incisal edge,V,-1.59069045055921
+3,ca_precision_cut,B (11),Incisal edge,V,-0.13537425533256
+3,ca_aligner_hook,B (11),Incisal edge,V,0.2984693165786264
+3,ca_metal_hook,B (11),Incisal edge,V,0.294061801494779
+3,ca_control,B (11),Incisal edge,V,-0.4950518112505847
+4,hg,B (11),Incisal edge,V,-1.65762511832085
+4,ca_precision_cut,B (11),Incisal edge,V,0.19863250613798983
+4,ca_aligner_hook,B (11),Incisal edge,V,0.46498881028567357
+4,ca_metal_hook,B (11),Incisal edge,V,0.4788512748113163
+4,ca_control,B (11),Incisal edge,V,0.004404905167200296
+5,hg,B (11),Incisal edge,V,-1.6631495008868367
+5,ca_precision_cut,B (11),Incisal edge,V,0.5938144142745524
+5,ca_aligner_hook,B (11),Incisal edge,V,0.7587677030078459
+5,ca_metal_hook,B (11),Incisal edge,V,0.807332223738287
+5,ca_control,B (11),Incisal edge,V,-0.12346058409797439
+6,hg,B (11),Incisal edge,V,-1.2108351085953866
+6,ca_precision_cut,B (11),Incisal edge,V,0.16078336993429565
+6,ca_aligner_hook,B (11),Incisal edge,V,0.4796280854582161
+6,ca_metal_hook,B (11),Incisal edge,V,0.4687860592355368
+6,ca_control,B (11),Incisal edge,V,-0.2570277474871893
+8,hg,F (12),Incisal edge,BP,4.966120259065285
+8,ca_precision_cut,F (12),Incisal edge,BP,1.8446091306030763
+8,ca_aligner_hook,F (12),Incisal edge,BP,1.8131179132747166
+8,ca_metal_hook,F (12),Incisal edge,BP,1.8156540576912206
+8,ca_control,F (12),Incisal edge,BP,1.0832127725562204
+3,hg,F (12),Incisal edge,BP,2.8478992561989718
+3,ca_precision_cut,F (12),Incisal edge,BP,1.8190654744257826
+3,ca_aligner_hook,F (12),Incisal edge,BP,2.1090937848423192
+3,ca_metal_hook,F (12),Incisal edge,BP,2.094770821099532
+3,ca_control,F (12),Incisal edge,BP,0.7815503414709751
+4,hg,F (12),Incisal edge,BP,3.696594272799193
+4,ca_precision_cut,F (12),Incisal edge,BP,2.318486133890169
+4,ca_aligner_hook,F (12),Incisal edge,BP,2.3630700323236593
+4,ca_metal_hook,F (12),Incisal edge,BP,2.373684004082538
+4,ca_control,F (12),Incisal edge,BP,1.0467441317560073
+5,hg,F (12),Incisal edge,BP,3.9704717337283215
+5,ca_precision_cut,F (12),Incisal edge,BP,1.9700480869374213
+5,ca_aligner_hook,F (12),Incisal edge,BP,2.202202826330192
+5,ca_metal_hook,F (12),Incisal edge,BP,2.2213561607820322
+5,ca_control,F (12),Incisal edge,BP,1.2241487687323507
+6,hg,F (12),Incisal edge,BP,3.3758114992776798
+6,ca_precision_cut,F (12),Incisal edge,BP,1.9564329526400308
+6,ca_aligner_hook,F (12),Incisal edge,BP,1.9963739525969384
+6,ca_metal_hook,F (12),Incisal edge,BP,1.9729818334082658
+6,ca_control,F (12),Incisal edge,BP,0.9974309945210964

@@ -1,0 +1,29 @@
+{
+ "groups": [
+  "hg",
+  "ca_precision_cut",
+  "ca_aligner_hook",
+  "ca_metal_hook",
+  "ca_control"
+ ],
+ "steps": {
+  "hg": 70,
+  "ca_precision_cut": 70,
+  "ca_aligner_hook": 70,
+  "ca_metal_hook": 70,
+  "ca_control": 70
+ },
+ "tables": {},
+ "match": {
+  "fdi": 16,
+  "mm": 1.0,
+  "step_of": {
+   "hg": 6,
+   "ca_precision_cut": 19,
+   "ca_aligner_hook": 20,
+   "ca_metal_hook": 20,
+   "ca_control": 22
+  },
+  "not_reached": []
+ }
+}
