@@ -1,0 +1,9 @@
+hg            hg
+ca_precision_cut ca_precision_cut
+ca_aligner_hook ca_aligner_hook
+ca_metal_hook ca_metal_hook
+ca_control    ca_control
+hg_pdl068     hg OFJ_PDL_LINEAR_E=0.68
+pc_pdl068     ca_precision_cut OFJ_PDL_LINEAR_E=0.68
+cah_pdl068    ca_aligner_hook OFJ_PDL_LINEAR_E=0.68
+cmh_pdl068    ca_metal_hook OFJ_PDL_LINEAR_E=0.68

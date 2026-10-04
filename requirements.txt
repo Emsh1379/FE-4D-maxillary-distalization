@@ -1,0 +1,11 @@
+numpy
+scipy
+matplotlib
+scikit-image
+trimesh
+manifold3d
+pyamg
+pypardiso
+# optional: GPU assembly and cuDSS solver (ofj4d/gpu4d.py)
+# torch
+# nvmath-python[cu12]
