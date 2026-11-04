@@ -273,6 +273,7 @@ class Pardiso:
 # NVIDIA cuDSS, loaded from an isolated directory so the model's torch keeps its own
 # CUDA libraries (a Studio cannot hold a second environment).
 CUDSS_DIR = os.environ.get('OFJ_CUDSS_DIR', os.path.expanduser('~/.pylibs_cudss'))
+CUDSS_CU = os.environ.get('OFJ_CUDSS_CU', 'cu12')      # 'cu13' for a CUDA 13 torch build
 
 
 class CuDSS:
@@ -298,7 +299,7 @@ class CuDSS:
     def __init__(self):
         import ctypes
         import torch                                           # noqa: F401  CUDA libs first
-        lib = os.path.join(CUDSS_DIR, 'nvidia', 'cu12', 'lib')
+        lib = os.path.join(CUDSS_DIR, 'nvidia', CUDSS_CU, 'lib')
         ctypes.CDLL(os.path.join(lib, 'libcudss.so.0'), mode=ctypes.RTLD_GLOBAL)
         if CUDSS_DIR not in sys.path:
             sys.path.append(CUDSS_DIR)
@@ -318,7 +319,7 @@ class CuDSS:
     @staticmethod
     def available():
         return (LINSOLVE in ('cudss', 'auto') and
-                os.path.exists(os.path.join(CUDSS_DIR, 'nvidia', 'cu12', 'lib', 'libcudss.so.0')))
+                os.path.exists(os.path.join(CUDSS_DIR, 'nvidia', CUDSS_CU, 'lib', 'libcudss.so.0')))
 
     def solve(self, As, bs, upper=False):
         U = As if upper else triu(As, format='csr')

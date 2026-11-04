@@ -93,15 +93,21 @@ def build(geom=None, xt=BR.XT_DEFAULT, out=FIXED_PKL):
 
 
 class Headgear:
-    """Cervical headgear: constant force at the headgear tube of the first molar."""
+    """Headgear: constant force on the first molar.
 
-    def __init__(self, S, fx, arch, gf=spec.HG_FORCE_GF, angle=spec.HG_ANGLE):
+    HG_LINE = 'tube' (default): the force acts at the headgear tube (the inner bow's attachment),
+    so it carries the moment of the tube's offset from the tooth.  'cres': the line of action
+    passes through the first molar's centroid, the usual stand-in for its centre of resistance,
+    which is what an outer bow adjusted for bodily movement does; no moment is applied.
+    A negative HG_ANGLE points the force above the occlusal plane (intrusive, high-pull side)."""
+
+    def __init__(self, S, fx, arch, gf=spec.HG_FORCE_GF, angle=spec.HG_ANGLE, line=spec.HG_LINE):
         u = spec.UNN[16]
         self.unn = u
         self.tube_rest = fx[u]['hg_tube']
         self.F = gf*spec.GF_TO_N*BR.unit(np.cos(np.radians(angle))*arch.ey
                                          + np.sin(np.radians(angle))*arch.en)
-        self.gf, self.angle = gf, angle
+        self.gf, self.angle, self.line = gf, angle, line
 
     def point(self, state):
         T = state.T[self.unn]
@@ -110,17 +116,21 @@ class Headgear:
     def reduced(self, S, state, n):
         r = np.zeros(n)
         q = S.q_col[self.unn]
-        x = self.point(state)
-        c = S.tooth[self.unn]['centroid_cur']
         r[q:q+3] = self.F
-        r[q+3:q+6] = np.cross(x - c, self.F)
+        if self.line != 'cres':
+            x = self.point(state)
+            c = S.tooth[self.unn]['centroid_cur']
+            r[q+3:q+6] = np.cross(x - c, self.F)
         return r
 
     def describe(self, S):
         t = S.tooth[self.unn]
         rel = self.tube_rest - t['crown_c']
-        return (f"cervical headgear: {self.gf:.0f} gf = {np.linalg.norm(self.F):.4f} N at the 16 "
-                f"headgear tube, {self.angle:.0f} deg below the occlusal plane\n"
+        side = 'below' if self.angle >= 0 else 'above'
+        where = ('the 16 headgear tube' if self.line != 'cres'
+                 else 'a line through the 16 centroid (centre of resistance, no moment)')
+        return (f"headgear: {self.gf:.0f} gf = {np.linalg.norm(self.F):.4f} N at {where}, "
+                f"{abs(self.angle):.1f} deg {side} the occlusal plane\n"
                 f"  tube vs 16 crown centre: {rel @ t['e_d']:+.2f} distal {rel @ t['e_b']:+.2f} buccal "
                 f"{rel @ t['e_o']:+.2f} occlusal;  force {np.round(self.F, 3)}")
 
@@ -261,7 +271,7 @@ def run(iters=spec.HG_ITER, out=None, resume=True, tag='hg'):
         S.tooth[u]['centroid_cur'] = state.centroid(u)
     arch = ArchForm(S)
     hg = Headgear(S, FS.fx, arch)
-    print(f"group 'hg': fixed appliance + cervical headgear   [rigid bone, custom solver]", flush=True)
+    print(f"group 'hg': fixed appliance + headgear   [rigid bone, custom solver]", flush=True)
     print(hg.describe(S), flush=True)
     ref = dict(crown={u: crown_point(S, u) for u in S.keep},
                root={u: root_point(S, u) for u in S.keep})
@@ -321,7 +331,7 @@ def run(iters=spec.HG_ITER, out=None, resume=True, tag='hg'):
                          hist=hist, per_iter=per_iter, T={u: state.T[u].copy() for u in S.keep},
                          wire_x=FS.wire.x.copy(), wire_R=FS.wire.R.copy(), E_pdl=E_prev, ref=ref, keep=S.keep,
                          N_lag=None if FS.sc is None else FS.sc.N_lag.copy(),
-                         hg=dict(F=hg.F, gf=hg.gf, angle=hg.angle, tube=hg.tube_rest)),
+                         hg=dict(F=hg.F, gf=hg.gf, angle=hg.angle, line=hg.line, tube=hg.tube_rest)),
                     open(out, 'wb'))
     return hist
 

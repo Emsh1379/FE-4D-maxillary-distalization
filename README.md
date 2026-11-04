@@ -76,6 +76,28 @@ Other settings (code defaults, unchanged):
 The variations in `build4d/study/jobs_sens.txt` (force, linear PDL, miniscrew height, hook length and width,
 headgear angle, bonded wire, wire friction) reproduce the sensitivity analyses.
 
+## Revision (BMC Oral Health, first round of review)
+
+Twenty new runs on all five patients answer the reviewers (job definitions: `build4d/study/jobs_revision.txt`):
+
+| Job | What it tests | Setting |
+|---|---|---|
+| `ctl_pdl068` | aligner-only control with the linear PDL | `OFJ_PDL_LINEAR_E=0.68` |
+| `hg_izc` | headgear force vector matched to the IZC elastic (19.7–26.3° above the occlusal plane) | `OFJ_HG_ANGLE=-<angle>` |
+| `hg_cres` | headgear line of action through the 16 centroid (outer bow adjusted, no moment) | `OFJ_HG_LINE=cres` |
+| `hg_level` | headgear on a levelled set-up (all slots on one flat passive archwire) | `OFJ_WIRE_SETUP=level`, own `OFJ_FIXED` |
+
+Code changes: `OFJ_HG_LINE` and negative `OFJ_HG_ANGLE` in `fixed4d.py`/`spec.py`; `OFJ_CUDSS_CU=cu13` lets
+`solve4d.py` use cuDSS with a CUDA 13 build of torch.
+
+`tools/revision/` rebuilds the paper's landmark paths from the published per-step tables (each landmark's rest
+point is solved exactly from the stored rigid-body transforms; residual below the tables' 1e-4 mm rounding) and
+reproduces the published statistics exactly, then adds: the control in the tests, the matched comparison at
+0.4–1.2 mm, the linear-PDL control, the headgear variants, the prescribed-movement table and two figures.
+Results: `out/revision/` (`revision_analyses.md`, `New_tables_and_figures.*`, `Response_to_Reviewers.*`,
+per-step values of every new run in `revision_runs_long.csv`). The runs were made on Kaggle (2 x T4) with
+`tools/revision/kaggle_queue.py`.
+
 ## Running
 
 Python 3.10+ with the packages in `requirements.txt`. A run needs the patient FE model built from the

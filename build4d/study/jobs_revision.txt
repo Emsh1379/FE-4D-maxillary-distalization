@@ -1,0 +1,5 @@
+# Revision runs (all five patients). job  group  environment (on top of the production environment in README)
+ctl_pdl068    ca_control OFJ_PDL_LINEAR_E=0.68
+hg_izc        hg OFJ_HG_ANGLE=-<IZC elastic angle: P8 25.0, P3 26.3, P4 19.7, P5 20.4, P6 24.5>
+hg_cres       hg OFJ_HG_LINE=cres
+hg_level      hg OFJ_WIRE_SETUP=level OFJ_FIXED=build4d/rev/fixed_level.pkl   (build first: python ofj4d/fixed4d.py --build)

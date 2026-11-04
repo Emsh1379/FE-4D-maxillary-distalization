@@ -182,6 +182,10 @@ HG_FORCE_GF = float(os.environ.get('OFJ_HG_GF', STUDY_FORCE_GF))
 # doi 10.4041/kjod.2016.46.5.290 (same group as Kawamura et al. 2021, the wire model).
 HG_ANGLE = float(os.environ.get('OFJ_HG_ANGLE', 15.0))   # deg below the occlusal plane (cervical pull)
 HG_ITER = int(os.environ.get('OFJ_HG_ITER', 2*70))       # remodelling cycles = the aligner protocol's 70 x 2
+# Revision analyses: 'tube' (default) applies the force at the headgear tube; 'cres' puts its line
+# of action through the 16 centroid (outer bow adjusted for bodily movement, no moment).  A negative
+# OFJ_HG_ANGLE points the force above the occlusal plane, used to match the IZC elastic's vector.
+HG_LINE = os.environ.get('OFJ_HG_LINE', 'tube').lower()
 
 # PDL: overridable for the sensitivity run against the 3D study's linear PDL (E = 0.667 MPa)
 if os.environ.get('OFJ_PDL_LINEAR_E'):
