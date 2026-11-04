@@ -94,13 +94,10 @@ Code changes: `OFJ_HG_LINE` and negative `OFJ_HG_ANGLE` in `fixed4d.py`/`spec.py
 point is solved exactly from the stored rigid-body transforms; residual below the tables' 1e-4 mm rounding) and
 reproduces the published statistics exactly, then adds: the control in the tests, the matched comparison at
 0.4–1.2 mm, the linear-PDL control, the headgear variants, the prescribed-movement table and two figures.
-Results: `out/revision/` (`revision_analyses.md`, `Response_to_Reviewers.*`,
+Results: `out/revision/` (`revision_analyses.md`,
 per-step values of every new run in `revision_runs_long.csv`). The runs were made on Kaggle (2 x T4) with
 `tools/revision/kaggle_queue.py`.
 
-The revised submission (manuscript and Additional file 2 with tracked changes and clean, Additional file 1, response
-to reviewers) is `manuscript/FE-4D-maxillary-distalization_revision1.zip`; it was produced from the authors' files with
-`tools/revision/revise_ms.py`, `revise_supp.py` and `revise_xlsx.py` (tracked-change editing in `trk.py`).
 
 ## Running
 
