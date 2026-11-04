@@ -20,14 +20,14 @@ mm = lambda x: f'{x:+.2f}'.replace('-', '−')
 
 # contents
 c7 = [p for p in d.paras() if d.text(p) == 'S7. Supplementary discussion'][0]
-d.insert_after(c7, [d.new_par('S8. Analyses added in revision (Tables S10–S13)', d.block(c7).find(q('pPr')).find(q('pStyle')).get(q('val')))])
+d.insert_after(c7, [d.new_par('S8. Analyses added in revision (Tables S10–S14)', d.block(c7).find(q('pPr')).find(q('pStyle')).get(q('val')))])
 # S5.1
 p = F('Two sensitivity analyses were run on all five patients and are reported in the main text')
 d.replace(p, d.text(p).replace('Two sensitivity analyses were run on all five patients and are reported in the main text: a linear PDL (0.68 MPa) in place of the bilinear PDL (Table 4 of the main text), and',
-    'Three sensitivity analyses were run on all five patients and are reported in the main text: a linear PDL (0.68 MPa) in place of the bilinear PDL for all five groups, including the aligner-only control (Table 5 of the main text); three alternative headgear force systems (Table 6 of the main text; section S8.4); and'))
+    'Three sensitivity analyses were run on all five patients and are reported in the main text: a linear PDL (0.68 MPa) in place of the bilinear PDL for all five groups, including the aligner-only control (Table 5 of the main text); three alternative headgear force systems (section S8.4, Tables S13 and S14); and'))
 # S7
 p = F('Transverse effect of the headgear.')
-d.replace(p, '**Transverse effect of the headgear.** The headgear force was applied at the headgear tube, buccal to the centre of resistance of the first molar, along a line fixed in space. Such a force rotates the molar mesial-out, as also reported by Kang et al. [5], which moves the distobuccal cusp palatally. When the line of action was passed through the centroid of the first molar, which represents an outer bow adjusted for bodily movement, the palatal displacement of the distobuccal cusp at the end of the protocol fell from 4.71 to 1.04 mm and canine extrusion from 2.09 to 0.93 mm (Table 6 of the main text). The large transverse effect of the main model is therefore mainly the effect of the moment of a force at the tube, which a clinician would correct by adjusting the outer bow and expanding the inner bow.')
+d.replace(p, '**Transverse effect of the headgear.** The headgear force was applied at the headgear tube, buccal to the centre of resistance of the first molar, along a line fixed in space. Such a force rotates the molar mesial-out, as also reported by Kang et al. [5], which moves the distobuccal cusp palatally. When the line of action was passed through the centroid of the first molar, which represents an outer bow adjusted for bodily movement, the palatal displacement of the distobuccal cusp at the end of the protocol fell from 4.71 to 1.04 mm and canine extrusion from 2.09 to 0.93 mm (Table S13). The large transverse effect of the main model is therefore mainly the effect of the moment of a force at the tube, which a clinician would correct by adjusting the outer bow and expanding the inner bow.')
 p = F('Time scale.')
 d.replace(p, '**Time scale.** One remodelling iteration is not calibrated to clinical time. The headgear reached 0.8 mm of molar distalization at the equivalent of step 4.7 (about nine iterations), whereas the aligner groups needed about 19 steps, so the end-of-protocol comparison corresponds to a much longer effective treatment with headgear. The comparison at equal distalization was therefore the primary analysis, and the per-millimetre normalization is reported only descriptively. The equal-distalization point falls before the anterior teeth are activated in the aligner plan, so its anterior values reflect anchorage loss rather than planned retraction, and its sensitivity to the threshold is given in section S8.2.')
 p = F('Dependence on the PDL model.')
@@ -83,6 +83,12 @@ for m, lab in [('16 crown AP', 'First molar MB cusp, sagittal')] + LAB:
             cells.append(f'{int((np.sign(dd) == ref).sum())}/5 ({mm(dd.mean())})')
     rhv.append([lab] + cells)
 
+def msd(a): return f'{np.mean(a):.2f} ± {np.std(a, ddof=1):.2f}'.replace('-', '−')
+GH = ['hg', 'hg_izc', 'hg_cres', 'hg_level', 'ca_precision_cut']
+rhm = [['Outcome (mm)', 'HG, main model', 'HG, elastic direction', 'HG, through CRes', 'HG, levelled wire', 'PC'], ['**Equal first-molar distalization (0.8 mm)**', '', '', '', '', '']]
+rhm += [[lab] + [msd(val(g, m, 'm')) for g in GH] for m, lab in LAB]
+rhm += [['**End of the protocol**', '', '', '', '', '']]
+rhm += [[lab] + [msd(val(g, m, 'final')) for g in GH] for m, lab in [('16 crown AP', 'First molar MB cusp, sagittal')] + LAB]
 ref_h = [p for p in d.paras() if d.text(p) == 'References'][0]
 new = [h1('S8. Analyses added in revision'),
        h2('S8.1 Planned tooth movement for each patient'),
@@ -101,8 +107,11 @@ new = [h1('S8. Analyses added in revision'),
        d.make_table(tmpl, rct, [2300, 1600, 1720, 1720, 1720]),
        note('Mean difference, number of patients in which the elastic design exceeded the control, and Holm-adjusted p-value. Sign conventions as in Table 3 of the main text.'),
        h2('S8.4 Headgear force systems'),
-       body('Table S13 shows whether the difference between headgear and the precision cut kept the sign of the main model when the headgear force system was changed (mean values in Table 6 of the main text). The elastic-direction variant pointed the headgear force at the tube along the elastic of each patient (patient 8, 25.0°; 3, 26.3°; 4, 19.7°; 5, 20.4°; 6, 24.5° above the occlusal plane). The centre-of-resistance variant kept the cervical direction (15° below the occlusal plane) with the line of action through the centroid of the first molar. The levelled-wire variant seated every bracket and tube on one flat passive archwire, which on patient 8 required the second-molar tube to be turned 42° from its facial-axis orientation, so it is an idealized representation of a levelled arch.'),
-       cap('**Table S13 **Consistency of the headgear − precision cut difference under alternative headgear force systems'),
+       body('Table S13 gives the displacements with the three alternative headgear force systems, and Table S14 shows whether the difference between headgear and the precision cut kept the sign of the main model under each of them. The elastic-direction variant pointed the headgear force at the tube along the elastic of each patient (patient 8, 25.0°; 3, 26.3°; 4, 19.7°; 5, 20.4°; 6, 24.5° above the occlusal plane). The centre-of-resistance variant kept the cervical direction (15° below the occlusal plane) with the line of action through the centroid of the first molar. The levelled-wire variant seated every bracket and tube on one flat passive archwire, which on patient 8 required the second-molar tube to be turned 42° from its facial-axis orientation, so it is an idealized representation of a levelled arch.'),
+       cap('**Table S13 **Tooth displacement with alternative headgear force systems (mean ± SD, n = 5)'),
+       d.make_table(tmpl, rhm, [2526, 1300, 1300, 1300, 1300, 1300]),
+       note('HG, main model: cervical force 15° below the occlusal plane at the headgear tube of 16, archwire passive in brackets placed on the unaligned teeth. Elastic direction: the same force at the tube along the elastic direction of each patient. Through CRes: 15° below the occlusal plane with the line of action through the centroid of 16, used as its centre of resistance (CRes; no moment). Levelled wire: main force system with every bracket and tube seated on one flat passive archwire. PC, aligner with precision cut, shown for reference. Sign conventions as in Table 3 of the main text.'),
+       cap('**Table S14 **Consistency of the headgear − precision cut difference under alternative headgear force systems'),
        d.make_table(tmpl, rhv, [2300] + [1120]*6),
        note('Number of patients in which the headgear − precision cut difference had the same sign as in the main headgear model, and the mean difference (mm), at equal first-molar distalization (0.8 mm) and at the end of the protocol.')]
 d.insert_after(ref_h.getprevious(), new)
